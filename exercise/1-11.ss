@@ -1,0 +1,20 @@
+(define (F n)
+  (cond ((< n 3) n)
+      (else (+ (* (F (- n 1)) 1)
+               (* (F(- n 2)) 2)
+               (* (F( - n 3)) 3)))))
+
+(define (Fn n)
+    (define (Fn-it a b c count)
+        (cond ((< n 3) n)
+            ((<= count 0) a)
+            (else (Fn-it (+ a ( * 2 b) (* 3 c)) a b (- count 1)))))
+    (Fn-it 2 1 0 (- n 2)))
+    
+(F 3)
+(F 4)
+(F 5)
+
+(Fn 3)
+(Fn 4)
+(Fn 5)
