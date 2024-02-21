@@ -19,3 +19,11 @@
 (deep-reverse y)
 
 (append (list 1 2) (list 3))
+
+(car x)
+
+(cdr x)
+
+(car y)
+
+(cdr y)
