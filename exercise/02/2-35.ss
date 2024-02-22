@@ -6,8 +6,19 @@
                       initial 
                       (cdr sequence)))))
 
+; (define (count-leaves x)
+;   (cond ((null? x) 0)
+;         ((not (pair? x)) 1)
+;         (else (+ (count-leaves (car x))
+;                  (count-leaves (cdr x))))))
+
 (define (count-leaves t)
-  (accumulate ⟨??⟩ ⟨??⟩ (map ⟨??⟩ ⟨??⟩)))
+  (accumulate + 0 
+        (map (lambda (node)
+                (if (pair? node)
+                    (count-leaves node)
+                    1))
+                t)))
 
 (define y (list (list 1 2) 2 3))
 
