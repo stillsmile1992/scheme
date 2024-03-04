@@ -13,3 +13,9 @@
 (car ''abracad)
 
 (cdr ''abc)
+
+; (eq? a b)
+
+(eq? ''abra ''ab)
+
+(eq? '(1 2 3 (4 5)) '(1 2 3 4 5))
