@@ -24,4 +24,3 @@
 ((rand 'reset) 0)
 
 (rand 'generate)
-
